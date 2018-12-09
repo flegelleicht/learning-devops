@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  master:
+    build: ./service
+    expose:
+      - "4567"
+    labels:
+      - "traefik.frontend.rule=Host:service.localhost"
